@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   ArrowUpRight,
+  CalendarDays,
   ChevronDown,
   Compass,
   Instagram,
@@ -24,7 +25,6 @@ import outerImage from "@/assets/images/outerImage.webp";
 import shadowImage from "@/assets/images/shadowImage.webp";
 import skyImage from "@/assets/images/skyImage.webp";
 import cloudsImage from "@/assets/images/cloudsImage.webp";
-import aboveImage from "@/assets/images/aboveImage.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,6 +69,15 @@ const travelOffers = [
     text: "Faça parte de uma comunidade especial e receba promoções exclusivas e novidades em primeira mão.",
     action: "Quero entrar no Grupo VIP",
   },
+];
+
+const programming2027 = [
+  { slide: "02", title: "Trem da República", date: "16/01" },
+  { slide: "03", title: "Parque Maeda", date: "30/01" },
+  { slide: "04", title: "Makai Resort", date: "04 a 09/03" },
+  { slide: "05", title: "Cruzeiro MSC Musica", date: "22 a 26/03" },
+  { slide: "06", title: "São Thomé das Letras", date: "09 a 11/04" },
+  { slide: "07", title: "Maceió", date: "13 a 18/04" },
 ];
 
 function BrandMark({ light = false }) {
@@ -239,7 +248,6 @@ export default function SmoothScrollHero() {
           <Image src={innerImage} alt="" fill sizes="100vw" className="msi-layer msi-layer--inner" quality={76} />
           <Image src={shadowImage} alt="" fill sizes="100vw" className="msi-layer msi-layer--shadow" quality={72} />
           <Image src={outerImage} alt="" fill sizes="100vw" className="msi-layer msi-layer--outer" quality={76} />
-          <Image src={aboveImage} alt="" width={400} height={200} sizes="25vw" className="msi-layer msi-layer--above" quality={72} />
         </div>
 
         <div ref={contentRef} className="msi-hero__content">
@@ -390,6 +398,28 @@ export default function SmoothScrollHero() {
             </div>
           </div>
           <div className="msi-instagram__rail"><span>Viagens em grupo</span><span>Bate e volta</span><span>Grupo VIP</span><span>Caieiras · SP</span></div>
+          <div id="programacao-2027" className="msi-instagram__programming">
+            <div className="msi-instagram__programming-head">
+              <div>
+                <p className="msi-label">Segundo post fixado</p>
+                <h3>Programação MSI 2027</h3>
+              </div>
+              <p className="msi-instagram__programming-note">Uma sequência de experiências para já deixar os próximos embarques no calendário.</p>
+            </div>
+            <div className="msi-instagram__schedule">
+              {programming2027.map(({ slide, title, date }) => (
+                <article key={slide} className="msi-instagram__schedule-item">
+                  <div className="msi-instagram__schedule-top"><span>Slide {slide}</span><CalendarDays size={17} strokeWidth={1.4} /></div>
+                  <h4>{title}</h4>
+                  <p>{date}</p>
+                </article>
+              ))}
+            </div>
+            <div className="msi-instagram__programming-footer">
+              <span>Slide 08 · Encerramento</span>
+              <a href={instagramLink} target="_blank" rel="noreferrer">Ver no Instagram <ArrowUpRight size={16} /></a>
+            </div>
+          </div>
         </section>
 
         <section className="msi-blog msi-section">

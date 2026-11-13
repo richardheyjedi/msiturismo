@@ -74,7 +74,6 @@ button { border: 0; font: inherit; }
 .msi-layer--inner { z-index: 1; transform: scale(1.26); }
 .msi-layer--shadow { z-index: 2; opacity: .54; transform: scale(1.27); }
 .msi-layer--outer { z-index: 3; transform: scale(1.27); }
-.msi-layer--above { z-index: 4; inset: 9% auto auto 50%; width: min(25vw, 360px) !important; height: auto !important; transform: translateX(-50%); }
 
 .msi-hero__content { position: absolute; z-index: 10; inset: 0; display: grid; grid-template-columns: minmax(150px, 1fr) minmax(300px, 500px) minmax(180px, 1fr); align-items: center; gap: clamp(20px, 3vw, 42px); padding: 120px clamp(22px, 7vw, 112px) 90px; transform-origin: center; will-change: transform, opacity; }
 .msi-hero__eyebrow { align-self: start; display: flex; align-items: center; gap: 10px; padding-top: 9px; font-size: 10px; letter-spacing: .17em; text-transform: uppercase; }
@@ -181,6 +180,20 @@ button { border: 0; font: inherit; }
 .msi-instagram__follow:hover { gap: 25px; color: #c13584; }
 .msi-instagram__follow-arrow { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid currentColor; border-radius: 50%; }
 .msi-instagram__rail { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; margin-top: clamp(55px, 7vw, 90px); border-top: 1px solid rgba(1, 39, 86, .22); padding-top: 18px; color: var(--msi-muted); font-size: 9px; letter-spacing: .15em; text-transform: uppercase; }
+.msi-instagram__programming { margin-top: clamp(65px, 9vw, 115px); border-top: 1px solid rgba(1, 39, 86, .22); padding-top: clamp(25px, 3vw, 38px); }
+.msi-instagram__programming-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; }
+.msi-instagram__programming-head .msi-label { margin-bottom: 14px; }
+.msi-instagram__programming h3 { margin: 0; color: var(--msi-navy); font-size: clamp(37px, 5vw, 70px); font-weight: 500; letter-spacing: -.08em; line-height: .9; }
+.msi-instagram__programming-note { max-width: 310px; margin: 0; color: var(--msi-muted); font-size: 12px; line-height: 1.6; }
+.msi-instagram__schedule { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: clamp(45px, 6vw, 75px); background: rgba(1, 39, 86, .18); }
+.msi-instagram__schedule-item { min-height: 185px; padding: 20px 22px 22px; background: var(--msi-cream); }
+.msi-instagram__schedule-top { display: flex; align-items: center; justify-content: space-between; color: var(--msi-navy); }
+.msi-instagram__schedule-top span { color: var(--msi-gold); font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.msi-instagram__schedule-item h4 { max-width: 210px; margin: 47px 0 12px; color: var(--msi-navy); font-size: clamp(20px, 2vw, 28px); font-weight: 500; letter-spacing: -.05em; line-height: .95; }
+.msi-instagram__schedule-item p { margin: 0; color: var(--msi-muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+.msi-instagram__programming-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 20px; color: var(--msi-muted); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.msi-instagram__programming-footer a { display: inline-flex; align-items: center; gap: 8px; color: var(--msi-navy); font-weight: 700; transition: gap 180ms ease, color 180ms ease; }
+.msi-instagram__programming-footer a:hover { gap: 13px; color: #c13584; }
 
 .msi-blog { color: white; background: var(--msi-navy); }
 .msi-blog__heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-top: clamp(55px, 7vw, 95px); }
@@ -426,7 +439,6 @@ button { border: 0; font: inherit; }
   .msi-scroll-indicator { right: 22px; bottom: 28px; left: 22px; width: auto; }
   .msi-scroll-indicator__content span:last-child { display: none; }
   .msi-hero__clouds { top: 12%; height: clamp(100px, 18vh, 190px); }
-  .msi-layer--above { top: 16%; width: 44% !important; }
   .msi-intro__content, .msi-contact__grid { grid-template-columns: 1fr; gap: 56px; }
   .msi-intro__aside { max-width: 420px; }
   .msi-experiences__heading, .msi-offers__heading { display: block; }
@@ -443,6 +455,8 @@ button { border: 0; font: inherit; }
   .msi-vip__visual { min-height: 280px; max-width: 520px; }
   .msi-vip__benefits { grid-template-columns: 1fr; gap: 12px; }
   .msi-instagram__rail { justify-content: flex-start; }
+  .msi-instagram__programming-head { align-items: flex-start; flex-direction: column; gap: 24px; }
+  .msi-instagram__schedule { grid-template-columns: repeat(2, 1fr); }
   .msi-blog__heading { display: block; }
   .msi-blog__heading .msi-label { width: auto; }
   .msi-blog__grid { grid-template-columns: repeat(2, 1fr); }
@@ -472,6 +486,10 @@ button { border: 0; font: inherit; }
   .msi-vip__topline { align-items: flex-start; flex-direction: column; gap: 15px; }
   .msi-vip__topline-note { padding-left: 1px; }
   .msi-vip__visual-orbit { width: min(78vw, 310px); }
+  .msi-instagram__schedule { grid-template-columns: 1fr; }
+  .msi-instagram__schedule-item { min-height: 155px; }
+  .msi-instagram__schedule-item h4 { margin-top: 34px; }
+  .msi-instagram__programming-footer { align-items: flex-start; flex-direction: column; gap: 14px; line-height: 1.4; }
   .msi-blog__grid { grid-template-columns: 1fr; }
   .msi-blog-page__hero { padding-bottom: 85px; }
   .msi-blog-page__nav { align-items: flex-start; }
